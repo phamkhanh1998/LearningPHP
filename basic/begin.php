@@ -28,6 +28,13 @@
     $num1 = 5;
     $num2 = 15;
 
-    echo $num1 + $num2;
+    function phepcong() {
+        $sum = $GLOBALS['num1'] + $GLOBALS['num2'];
+        echo $sum . "<br>";
+    }
+
+    phepcong();
+
+
 
 ?>

@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
     <body>
-        <?php
-            echo "Hello World";
+        <form action="xuly.php" method="post">
+            Name: <input type="text" name="name">
+            Email: <input type="text" name="email">
+            <input type="submit">
+        </form>
 
-        ?>
     </body>
 </html>
