@@ -1,16 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-    <body>
-        <form action="xuly.php" method="post">
-            Name: <input type="text" name="name">
-            Email: <input type="text" name="email">
-            <input type="submit">
-        </form>
+<ul>
+    <li><a href="index.php?page_layout=homepage">Homepage</a></li>
+    <li><a href="index.php?page_layout=products">Products</a></li>
+    <li><a href="index.php?page_layout=contact">Contact</a></li>
+    <li><a href="index.php?page_layout=cart">Cart</a></li>
+</ul>
 
-    </body>
-</html>
+<?php
+    if(isset($_GET['page_layout'])) {
+        switch($_GET['page_layout']) {
+            case 'homepage';
+            include "homepage.php";
+            break;
+
+            case 'products';
+            include "products.php";
+            break;
+
+            case 'contact';
+            include "contact.php";
+            break;
+
+            case 'cart';
+            include "cart.php";
+            break;
+        }
+    }
+?>
